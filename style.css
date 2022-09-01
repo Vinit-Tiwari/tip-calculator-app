@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+:root{
+    --bg-clr:#C5E4E7;
+    --white:0, 0%, 100%;
+    --light-clr:185, 41%, 84%;
+    --dark-cyan-clr:183, 100%, 15%;
+    --font-clr-cyan:183, 100%, 15%;
+    --zero-font:40px;
+    --grayish-clr:#36BFAC;
+    --mid-cyan-clr:#0D686D;
+}
+
+.font-clr{color: hsl(var(--font-clr-cyan));}
+.white-font-clr{color: hsl(var(--white));}
+.perPerson-font-clr{color: hsl(var(--light-clr));}
+.bg-clr{background-color: var(--bg-clr);}
+.white-clr{background-color: hsl(var(--white));}
+.light-clr{background-color: hsla(var(--light-clr),0.4);}
+.dark-clr{background-color: hsl(var(--dark-cyan-clr));}
+.zero-size{font-size: var(--zero-font);text-align: center; color: var(--grayish-clr); font-weight: 700;}
+
+.flex{
+    display: flex;
+}
+
+.gap{
+    gap: 0.5rem;
+}
+
+.column{
+    flex-direction: column;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Outfit',sans-serif;
+}
+
+.outter-most{
+    min-height: 38rem;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tip-options{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.tip-options p{
+    text-align: center;
+    font-weight: 700;
+    background-color: hsl(var(--dark-cyan-clr));
+    color: hsl(var(--white));
+    padding: 0.5rem 0rem;
+    border-radius: 0.3rem;
+    max-width: 6rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.tip-options p:last-child{
+    background-color: hsla(var(--light-clr),0.4);
+    color: hsl(var(--dark-cyan-clr));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    min-height: 25rem;
+    gap: 2rem;
+    padding: 2rem 2rem ;
+    border-radius: 1.5rem;
+}
+
+.content div{
+    min-width: 20rem;
+    min-height: 20rem;
+    border-radius: 1rem;
+}
+
+.table-part-1{
+    justify-content: space-around;
+}
+
+
+.form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form svg{
+    position: absolute;
+    left: 10%;
+}
+
+.input{
+    border: none;
+    width: 90%;
+    height: 2.5rem;
+    direction: rtl;
+    border-radius: 0.2rem;
+    font-size: 24px;
+    color: hsl(var(--dark-cyan-clr));
+    font-weight: 700;
+    border:solid 0.3rem hsla(var(--light-clr),0.1);
+}
+
+.table-part-1 input:focus{
+    outline: 2px solid var(--grayish-clr);
+}
+
+.custom{
+        border: none;
+        border-radius: 0.2rem;
+        color: hsl(var(--dark-cyan-clr));
+        height: 140%;
+        direction: rtl;
+        width: 90%;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.1rem;
+}
+.custom::placeholder{
+    text-align: center;
+    color: hsl(var(--dark-cyan-clr));
+}
+
+.table-part-2{
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.reset{
+    background-color: var(--mid-cyan-clr);
+    padding: 0.7rem 0; 
+    border-radius: 0.3rem;
+    color: hsl(var(--light-clr));
+    font-weight: 700;
+    cursor: pointer;
+}
+.reset:hover{
+    background-color:#36BFAC;
+    color: hsl(var(--dark-cyan-clr));
+}
+
+.tip-options p:not(:last-child):hover{
+    background-color:#36BFAC;
+    color: hsl(var(--dark-cyan-clr));
+}
+
+.validation{
+    color: red;
+    text-align: end;
+    font-size: 0.9rem;
+    display:none;
+}
+
+@media screen and (max-width:768px) {
+    body{
+        overflow: visible;
+        overflow-x: hidden;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content div{
+        min-width: 10rem;
+    }
+    .table-part-1{
+        gap: 2rem;
+    }
+    .tip-options{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .tip-options p{
+        max-width: 9rem;
+    }
+    .outter-most{
+        padding: 2rem 1rem;
+        padding-bottom: 2rem;
+    }
+}
+
