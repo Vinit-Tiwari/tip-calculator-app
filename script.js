@@ -49,4 +49,7 @@ var tipCustom = document.getElementById("x");
   billingAmt.value=""
   persons.value=""
   tipCustom.value=""
+  tp=0
+  tipPerPerson.innerHTML="0.00"
+  totalPerPerson.innerHTML="0.00"
  }
